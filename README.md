@@ -51,6 +51,15 @@ def doActiveScan(self,baseRequestResponse,insertionPoint): # Invoked thisd metho
 def doPassiveScan(self,baseRequestResponse):
   return None
 ```
+* IHttpListener 
+```python
+from burp import IHttpListener
+
+callbacks.registerHttpListener(self)
+
+def processHttpMessage(self,toolFlag,messageIsRequest,currentRequest):
+```
+
 
 IHttpRequestResponse – Representation of an HTTP message
 IHttpService – Representation of an HTTP service, to which requests can be sent
