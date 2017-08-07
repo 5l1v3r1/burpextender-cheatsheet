@@ -10,8 +10,11 @@ class BurpExtender(IBurpExtender):
 * IBurpExtenderCallbacks : Pass in registerExtenderCallbacks Method .
 ```python
 def registerExtenderCallbacks(self,callbacks):
-```
-> contains lot of feature's to build extension .
+
+
+	callbacks.registerHttpListener(self) # For Listening which will be notified requests responses made by burp tool
+	callbacks.registerProxyListener(self) # This method is used to register a listener which will be notified of requests and responses being processed by the Proxy tool. 
+# contains lot of feature's to build extension .
 
 ```python
   def registerExtenderCallbacks(self, callbacks):
